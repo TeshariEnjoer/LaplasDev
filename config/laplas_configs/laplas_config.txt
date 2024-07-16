@@ -1,25 +1,3 @@
-# You can use the "$include" directive to split your configs however you want
-
-# $include game_options.txt
-$include dbconfig.txt
-$include comms.txt
-$include logging.txt
-$include resources.txt
-# $include skyrat/skyrat_config.txt
-$include laplas_configs/laplas_game_options.txt
-$include laplas_configs/laplas_config.txt
-$include interviews.txt
-$include lua.txt
-$include auxtools.txt
-
-# You can use the @ character at the beginning of a config option to lock it from being edited in-game
-# Example usage:
-# @SERVERNAME tgstation
-# Which sets the SERVERNAME, and disallows admins from being able to change it using View Variables.
-# @LOG_TWITTER 0
-# Which explicitly disables LOG_TWITTER, as well as locking it.
-# There are various options which are hard-locked for security reasons.
-
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
 SERVERNAME LAPLAS STATION
 
@@ -97,13 +75,13 @@ ENABLE_LOCALHOST_RANK
 PICTURE_LOGGING_CAMERA
 
 ## period of time in seconds for players to be considered inactive
-INACTIVITY_PERIOD 300
+# INACTIVITY_PERIOD 300
 
 ## period of time in seconds for players to be considered afk and kickable
-AFK_PERIOD 1200
+# AFK_PERIOD 600
 
 ## disconnect players who are considered afk
-KICK_INACTIVE
+# KICK_INACTIVE
 
 ## Comment this out to stop admins being able to choose their personal ooccolor
 ALLOW_ADMIN_OOCCOLOR
@@ -115,7 +93,7 @@ ALLOW_ADMIN_ASAYCOLOR
 ID_CONSOLE_JOBSLOT_DELAY 30
 
 ## allow players to initiate a restart vote
-ALLOW_VOTE_RESTART
+#ALLOW_VOTE_RESTART
 
 ## allow players to initiate a map-change vote
 #ALLOW_VOTE_MAP
@@ -127,28 +105,28 @@ ALLOW_VOTE_RESTART
 MAX_ROCKING_VOTES 1
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
-VOTE_DELAY 12000
+VOTE_DELAY 6000
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
-VOTE_PERIOD 1200
+VOTE_PERIOD 600
 
 ## prevents dead players from voting or starting votes
-NO_DEAD_VOTE
+# NO_DEAD_VOTE
 
 ## players' votes default to "No vote" (otherwise,  default to "No change")
-DEFAULT_NO_VOTE
+# DEFAULT_NO_VOTE
 
 ## Determines if players can respawn after death
 ## 0 = Cannot respawn (default)
 ## 1 = Can respawn
 ## 2 = Can respawn if choosing a different character
-ALLOW_RESPAWN 2
+ALLOW_RESPAWN 0
 
 ## Respawn delay (deciseconds), which doesn't allow to return to lobby
-RESPAWN_DELAY 1200
+RESPAWN_DELAY 0
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Fenysha
+HOSTEDBY Yournamehere
 
 ## Uncomment this to stop people connecting to your server without a registered ckey. (i.e. guest-* are all blocked from connecting)
 GUEST_BAN
@@ -189,7 +167,7 @@ IPINTEL_REJECT_BAD
 
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 ## Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
-SERVER ss13.laplas.com:1337
+# SERVER ss13.example.com:2506
 
 ## forum address
 # FORUMURL http://tgstation13.org/phpBB/index.php
@@ -260,7 +238,7 @@ ALLOW_HOLIDAYS
 #SHOW_IRC_NAME
 
 ## Uncomment to prevent machines syncing to the Science techweb by default.
-NO_DEFAULT_TECHWEB_LINK
+#NO_DEFAULT_TECHWEB_LINK
 
 ##Defines the ticklag for the world. Ticklag is the amount of time between game ticks (aka byond ticks) (in 1/10ths of a second).
 ##	This also controls the client network update rate, as well as the default client fps
@@ -273,7 +251,7 @@ TICKLAG 0.5
 #AUTOMUTE_ON
 
 ## Uncomment this to let players see their own notes (they can still be set by admins only)
-SEE_OWN_NOTES
+#SEE_OWN_NOTES
 
 ### Comment these two out to prevent notes fading out over time for admins.
 ## Notes older then this will start fading out.
@@ -486,7 +464,7 @@ DISABLE_HIGH_POP_MC_MODE_AMOUNT 60
 ##  15x15 would be the standard square view. 21x15 is what goonstation uses for widescreen.
 ##  Setting this to something different from DEFAULT_VIEW_SQUARE will enable widescreen toggles
 ##	Do note that changing this value will affect the title screen. The title screen will have to be updated manually if this is changed.
-DEFAULT_VIEW 19x15
+DEFAULT_VIEW 21x15
 
 ##Default view size, in tiles. Should *always* be square.
 ## The alternative square viewport size if you're using a widescreen view size

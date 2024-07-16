@@ -68,8 +68,8 @@
 					left: 2vmin;
 					height: 4vmin;
 					width: calc(100% - 4vmin);
-					border-left: 2px solid green;
-					border-right: 2px solid green;
+					border-left: 2px solid rgb(201, 181, 0);
+					border-right: 2px solid rgb(201, 181, 0);
 					padding: 4px;
 					background-color: black;
 				}
@@ -77,7 +77,7 @@
 				.progress_bar {
 					width: 0%;
 					height: 100%;
-					background-color: green;
+					background-color: rgb(201, 181, 0);
 				}
 
 				@keyframes looping_sub_pattern {
@@ -93,11 +93,11 @@
 					width: 0%;
 					height: 100%;
 					float: right;
-					background-color: lime;
+					background-color: rgb(255, 196, 0);
 					background-image: repeating-linear-gradient(
 						-45deg,
-						green,
-						green 7px,
+						rgb(201, 181, 0),
+						rgb(201, 181, 0) 7px,
 						black 7px,
 						black 8px
 					);
@@ -111,8 +111,8 @@
 					width: 90vmin;
 					min-height: 10vmin;
 					top: calc(50% + 22.5vmin);
-					left:50%;
-					transform: translate(-50%, -50%);
+					left:25%;
+					transform: translate(-25%, -50%);
 					z-index: 1;
 					border: 2px solid white;
 					border-radius: 4px;
