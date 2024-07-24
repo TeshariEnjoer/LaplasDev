@@ -392,6 +392,7 @@
 #include "code\__DEFINES\traits\declarations.dm"
 #include "code\__DEFINES\traits\macros.dm"
 #include "code\__DEFINES\traits\sources.dm"
+#include "code\__DEFINES\~laplas_defines\job_titles.dm"
 #include "code\__DEFINES\~skyrat_defines\_organ_defines.dm"
 #include "code\__DEFINES\~skyrat_defines\access.dm"
 #include "code\__DEFINES\~skyrat_defines\actionspeed_modification.dm"
@@ -8470,4 +8471,7 @@
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\sentinel.dm"
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\spitter.dm"
 #include "modular_skyrat\modules\xenos_skyrat_redo\code\xeno_types\warrior.dm"
+#include "modular_tLPA\.modules\appearance\walls\laplas_walls.dm"
+#include "modular_tLPA\.modules\jobs\anomalist.dm"
+#include "modular_tLPA\.modules\jobs\~job_pathes.dm"
 // END_INCLUDE
