@@ -1,4 +1,5 @@
-GLOBAL_LIST_INIT(skill_types, subtypesof(/datum/skill))
+// GLOBAL_LIST_INIT(skill_types, subtypesof(/datum/skill))
+GLOBAL_LIST_INIT(skill_types, subtypesof(/datum/skill/job))
 
 /datum/skill
 	var/name = "Skilling"

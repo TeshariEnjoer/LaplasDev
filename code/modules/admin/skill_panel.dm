@@ -1,8 +1,10 @@
 /datum/skill_panel
 	var/datum/mind/targetmind
 	var/client/holder //client of whoever is using this datum
+	var/admin = FALSE	//LAPLAS EDIT - Skills
 
-/datum/skill_panel/New(user, datum/mind/mind)//H can either be a client or a mob due to byondcode(tm)
+/datum/skill_panel/New(user, datum/mind/mind, is_admin = FALSE)//H can either be a client or a mob due to byondcode(tm)
+	admin = is_admin	//LAPLAS EDIT - Skills
 	targetmind = mind
 	if (istype(user,/client))
 		var/client/userClient = user
@@ -11,8 +13,10 @@
 		var/mob/userMob = user
 		holder = userMob.client //if its a mob, assign the mob's client to holder
 
+/*	LAPLAS REMOVEVAL - Skills
 /datum/skill_panel/ui_state(mob/user)
 	return GLOB.admin_state
+*/
 
 /datum/skill_panel/ui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -34,7 +38,7 @@
 				xp_req_to_level = SKILL_EXP_LIST[lvl_num+1] - SKILL_EXP_LIST[lvl_num]
 			var/exp_percent = exp / SKILL_EXP_LIST[SKILL_LEVEL_LEGENDARY]
 			.["skills"] += list(list("playername" = targetmind.current, "path" = type, "name" = S.name, "desc" = S.desc, "lvlnum" = lvl_num, "lvl" = lvl_name, "exp" = exp, "exp_prog" = xp_req_to_level - xp_prog_to_level, "exp_req" = xp_req_to_level, "exp_percent" = exp_percent, "max_exp" = SKILL_EXP_LIST[length(SKILL_EXP_LIST)]))
-
+			.["admin"] += admin //LAPLAS EDIT - Skills
 /datum/skill_panel/ui_act(action, params)
 	. = ..()
 	if(.)

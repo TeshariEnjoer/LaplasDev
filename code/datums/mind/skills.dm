@@ -62,6 +62,7 @@
 	var/level = get_skill_level(skill)
 	return SSskills.level_names[level]
 
+/* LAPLAS REMOVEVAL - SKILLS => modular_tLPA/.modules/mind~mind.dm
 /datum/mind/proc/print_levels(user)
 	var/list/shown_skills = list()
 	for(var/i in known_skills)
@@ -76,3 +77,4 @@
 		msg += "[initial(the_skill.name)] - [get_skill_level_name(the_skill)]\n"
 	msg += "</span>"
 	to_chat(user, examine_block(msg))
+*/

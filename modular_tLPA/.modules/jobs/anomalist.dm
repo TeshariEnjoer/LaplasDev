@@ -4,7 +4,7 @@
 	department_head = list(JOB_RESEARCH_DIRECTOR)
 	faction = FACTION_STATION
 	total_positions = 3
-	spawn_positions = 2
+	spawn_positions = 3
 	supervisors = SUPERVISOR_RD
 	exp_requirements = 180
 	exp_required_type = EXP_TYPE_CREW
@@ -20,16 +20,24 @@
 	liver_traits = list(TRAIT_BALLMER_SCIENTIST)
 
 	display_order = JOB_DISPLAY_ORDER_SCIENTIST
+	alt_titles = list(
+		"Anomalist"
+		"Realistic physic",
+		"Memetic Researcher",
+		"Anti-Memetic Researcher",
+		"Meta-Researcher"
+	)
 	departments_list = list(
 		/datum/job_department/science,
 		)
-
-	mail_goodies = list(
-		/obj/item/raw_anomaly_core/random = 10,
-		/obj/item/disk/design_disk/bepis = 2,
+	skills = list(
+		SKILL_TYPE_ANOMALISTIC = SKILL_LEVEL_MASTER,
+		SKILL_TYPE_SCIENCE = SKILL_LEVEL_JOURNEYMAN,
+		SKILL_TYPE_ROBOTICS = SKILL_LEVEL_NOVICE,
+		SKILL_TYPE_MEDICINE = SKILL_LEVEL_APPRENTICE,
+		SKILL_TYPE_COMBAT_MEELE = SKILL_LEVEL_NOVICE,
+		SKILL_TYPE_COMBAT_RANGED = SKILL_LEVEL_NOVICE
 	)
-	rpg_title = "Para-engineer"
 	job_flags = STATION_JOB_FLAGS
-	job_tone = "New amomaly spoted"
 
 

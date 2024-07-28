@@ -167,6 +167,7 @@
 		return
 
 	var/mob/living/carbon/human/spawned_human = spawned
+	/* LAPLAS REMOVEVAL - SKILLS
 	var/list/roundstart_experience
 
 	if(!config) //Needed for robots.
@@ -180,6 +181,10 @@
 	if(roundstart_experience)
 		for(var/i in roundstart_experience)
 			spawned_human.mind.adjust_experience(i, roundstart_experience[i], TRUE)
+	*/
+	if(skills)
+		for(var/s in skills)
+			spawned_human.mind.adjust_experience(s, skills[s], TRUE, TRUE)
 
 /// Return the outfit to use
 /datum/job/proc/get_outfit(consistent)
